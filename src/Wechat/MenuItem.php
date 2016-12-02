@@ -1,8 +1,8 @@
 <?php
 
-namespace Stoneworld\Wechat;
+namespace Jyj1993126\Wechat;
 
-use Stoneworld\Wechat\Utils\MagicAttributes;
+use Jyj1993126\Wechat\Utils\MagicAttributes;
 use Closure;
 
 /**

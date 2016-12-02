@@ -1,8 +1,8 @@
 <?php
 
-namespace Stoneworld\Wechat\Messages;
+namespace Jyj1993126\Wechat\Messages;
 
-use Stoneworld\Wechat\Exception;
+use Jyj1993126\Wechat\Exception;
 
 /**
  * 坐标消息

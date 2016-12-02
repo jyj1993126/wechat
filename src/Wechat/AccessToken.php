@@ -1,6 +1,6 @@
 <?php
 
-namespace Stoneworld\Wechat;
+namespace Jyj1993126\Wechat;
 
 /**
  * 全局通用 AccessToken
@@ -34,7 +34,7 @@ class AccessToken
      *
      * @var string
      */
-    protected $cacheKey = 'Stoneworld.wechat.access_token';
+    protected $cacheKey = 'Jyj1993126.wechat.access_token';
 
     // API
     const API_TOKEN_GET = 'https://qyapi.weixin.qq.com/cgi-bin/gettoken';

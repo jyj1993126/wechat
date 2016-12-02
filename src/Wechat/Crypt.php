@@ -1,8 +1,8 @@
 <?php
 
-namespace Stoneworld\Wechat;
+namespace Jyj1993126\Wechat;
 
-use Stoneworld\Wechat\Utils\XML;
+use Jyj1993126\Wechat\Utils\XML;
 
 /**
  * 加密解密

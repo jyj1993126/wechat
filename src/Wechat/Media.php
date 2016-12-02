@@ -1,11 +1,11 @@
 <?php
 
-namespace Stoneworld\Wechat;
+namespace Jyj1993126\Wechat;
 
-use Stoneworld\Wechat\Utils\Arr;
-use Stoneworld\Wechat\Utils\Bag;
-use Stoneworld\Wechat\Utils\File;
-use Stoneworld\Wechat\Utils\JSON;
+use Jyj1993126\Wechat\Utils\Arr;
+use Jyj1993126\Wechat\Utils\Bag;
+use Jyj1993126\Wechat\Utils\File;
+use Jyj1993126\Wechat\Utils\JSON;
 
 /**
  * 媒体素材.

@@ -1,9 +1,9 @@
 <?php
 
-namespace Stoneworld\Wechat\Messages;
+namespace Jyj1993126\Wechat\Messages;
 
-use Stoneworld\Wechat\Utils\MagicAttributes;
-use Stoneworld\Wechat\Utils\XML;
+use Jyj1993126\Wechat\Utils\MagicAttributes;
+use Jyj1993126\Wechat\Utils\XML;
 
 /**
  * 消息基类

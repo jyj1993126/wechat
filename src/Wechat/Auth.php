@@ -1,8 +1,8 @@
 <?php
 
-namespace Stoneworld\Wechat;
+namespace Jyj1993126\Wechat;
 
-use Stoneworld\Wechat\Utils\Bag;
+use Jyj1993126\Wechat\Utils\Bag;
 
 /**
  * OAuth 网页授权获取用户信息.

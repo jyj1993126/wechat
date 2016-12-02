@@ -1,5 +1,5 @@
 <?php
-namespace Stoneworld\Wechat;
+namespace Jyj1993126\Wechat;
 /**
  * error code 说明.
  * <ul>

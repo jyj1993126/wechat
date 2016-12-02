@@ -1,6 +1,6 @@
 <?php
 
-namespace Stoneworld\Wechat\Utils;
+namespace Jyj1993126\Wechat\Utils;
 
 /**
  * 签名生成器（专门用于生成微信各种签名）

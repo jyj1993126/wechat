@@ -1,6 +1,6 @@
 <?php
 
-namespace Stoneworld\Wechat;
+namespace Jyj1993126\Wechat;
 
 /**
  * 缓存服务

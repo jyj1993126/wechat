@@ -1,6 +1,6 @@
 <?php
 
-namespace Stoneworld\Wechat\Utils;
+namespace Jyj1993126\Wechat\Utils;
 
 use finfo;
 

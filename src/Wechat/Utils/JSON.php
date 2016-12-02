@@ -1,6 +1,6 @@
 <?php
 
-namespace Stoneworld\Wechat\Utils;
+namespace Jyj1993126\Wechat\Utils;
 
 // for PHP5.3, prevent PHP Notice msg assumed
 defined('JSON_UNESCAPED_UNICODE') || define('JSON_UNESCAPED_UNICODE', 256);

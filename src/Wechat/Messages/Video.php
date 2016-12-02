@@ -1,6 +1,6 @@
 <?php
 
-namespace Stoneworld\Wechat\Messages;
+namespace Jyj1993126\Wechat\Messages;
 
 /**
  * 视频消息

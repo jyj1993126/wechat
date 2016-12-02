@@ -1,8 +1,8 @@
 <?php
 
-namespace Stoneworld\Wechat;
+namespace Jyj1993126\Wechat;
 
-use Stoneworld\Wechat\Messages\BaseMessage;
+use Jyj1993126\Wechat\Messages\BaseMessage;
 
 class Broadcast
 {
@@ -18,7 +18,7 @@ class Broadcast
     /**
      * 消息
      *
-     * @var \Stoneworld\Wechat\Messages\BaseMessage;
+     * @var \Jyj1993126\Wechat\Messages\BaseMessage;
      */
     protected $message;
 
@@ -53,7 +53,7 @@ class Broadcast
     /**
      * 准备消息
      *
-     * @param \Stoneworld\Wechat\Messages\BaseMessage $message
+     * @param \Jyj1993126\Wechat\Messages\BaseMessage $message
      *
      * @return Broadcast
      */
@@ -62,7 +62,7 @@ class Broadcast
         is_string($message) && $message = Message::make('text')->with('content', $message);
 
         if (!$message instanceof BaseMessage) {
-            throw new \Exception("消息必须继承自 'Stoneworld\\Wechat\\BaseMessage'");
+            throw new \Exception("消息必须继承自 'Jyj1993126\\Wechat\\BaseMessage'");
         }
 
         $this->message = $message;

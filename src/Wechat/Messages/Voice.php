@@ -1,8 +1,8 @@
 <?php
 
-namespace Stoneworld\Wechat\Messages;
+namespace Jyj1993126\Wechat\Messages;
 
-use Stoneworld\Wechat\Media;
+use Jyj1993126\Wechat\Media;
 
 /**
  * 声音消息
@@ -22,7 +22,7 @@ class Voice extends BaseMessage
     /**
      * 媒体
      *
-     * @var \Stoneworld\Wechat\Media
+     * @var \Jyj1993126\Wechat\Media
      */
     protected $media;
 

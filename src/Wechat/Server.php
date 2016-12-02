@@ -1,11 +1,11 @@
 <?php
 
-namespace Stoneworld\Wechat;
+namespace Jyj1993126\Wechat;
 
-use Stoneworld\Wechat\Utils\Bag;
-use Stoneworld\Wechat\Utils\XML;
-use Stoneworld\Wechat\Crypt;
-use Stoneworld\Wechat\Messages\BaseMessage;
+use Jyj1993126\Wechat\Utils\Bag;
+use Jyj1993126\Wechat\Utils\XML;
+use Jyj1993126\Wechat\Crypt;
+use Jyj1993126\Wechat\Messages\BaseMessage;
 
 class Server
 {
@@ -42,14 +42,14 @@ class Server
     /**
      * 输入
      *
-     * @var \Stoneworld\Wechat\Utils\Bag
+     * @var \Jyj1993126\Wechat\Utils\Bag
      */
     protected $input;
 
     /**
      * 监听器
      *
-     * @var \Stoneworld\Wechat\Utils\Bag
+     * @var \Jyj1993126\Wechat\Utils\Bag
      */
     protected $listeners;
 

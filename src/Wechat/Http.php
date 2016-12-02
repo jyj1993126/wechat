@@ -1,9 +1,9 @@
 <?php
 
-namespace Stoneworld\Wechat;
+namespace Jyj1993126\Wechat;
 
-use Stoneworld\Wechat\Utils\Http as HttpClient;
-use Stoneworld\Wechat\Utils\JSON;
+use Jyj1993126\Wechat\Utils\Http as HttpClient;
+use Jyj1993126\Wechat\Utils\JSON;
 
 /**
  * @method mixed jsonPost($url, $params = array(), $options = array())

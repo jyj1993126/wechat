@@ -1,6 +1,6 @@
 <?php
 
-namespace Stoneworld\Wechat\Utils;
+namespace Jyj1993126\Wechat\Utils;
 
 /**
  * XML 工具类，用于构建与解析 XML.

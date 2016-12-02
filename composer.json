@@ -1,19 +1,19 @@
 {
-    "name": "stoneworld/wechat",
+    "name": "jyj1993126/wechat",
     "description": "微信企业号",
     "keywords": ["wechat"],
-    "homepage": "https://github.com/stoneworld",
+    "homepage": "https://github.com/jyj1993126",
     "license": "MIT",
     "authors": [
         {
-            "name": "stoneworld",
-            "homepage": "https://github.com/stoneworld",
+            "name": "leon J",
+            "homepage": "https://github.com/jyj1993126",
             "role": "Developer"
         }
     ],
     "minimum-stability" : "dev",
     "support": {
-        "email": "stoneworld1991@gmail.com"
+        "email": "jyj1993126@gmail.com"
     },
     "require": {
         "php":">=5.3",

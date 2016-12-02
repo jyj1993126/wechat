@@ -1,6 +1,7 @@
 <?php
 
 namespace Jyj1993126\Wechat;
+use Illuminate\Http\Request;
 
 /**
  * 链接.
@@ -53,16 +54,16 @@ class Url
      */
     public static function current()
     {
-        $protocol = (!empty($_SERVER['HTTPS'])
-                        && $_SERVER['HTTPS'] !== 'off'
-                        || $_SERVER['SERVER_PORT'] === 443) ? 'https://' : 'http://';
+	    /**
+	     * @var Request $request
+	     */
+	    $request = resolve( Request::class );
+	    $protocol = ( !empty( $request->server( 'HTTPS' ) )
+                        && $request->server('HTTPS') !== 'off'
+                        || $request->server('SERVER_PORT') === 443) ? 'https://' : 'http://';
 
-        if (isset($_SERVER['HTTP_X_FORWARDED_HOST'])) {
-            $host = $_SERVER['HTTP_X_FORWARDED_HOST'];
-        } else {
-            $host = $_SERVER['HTTP_HOST'];
-        }
+		$host = $request->server('HTTP_X_FORWARDED_HOST',$request->server('HTTP_HOST'));
 
-        return $protocol.$host.$_SERVER['REQUEST_URI'];
+        return $protocol.$host.$request->server('REQUEST_URI');
     }
 }

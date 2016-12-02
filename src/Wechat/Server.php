@@ -2,6 +2,7 @@
 
 namespace Jyj1993126\Wechat;
 
+use Illuminate\Http\Request;
 use Jyj1993126\Wechat\Utils\Bag;
 use Jyj1993126\Wechat\Utils\XML;
 use Jyj1993126\Wechat\Crypt;
@@ -66,8 +67,14 @@ class Server
 
     protected $encryptStr;
 
-    public function __construct($options)
+	/**
+	 * @var Request
+	 */
+	protected $request;
+
+    public function __construct($options )
     {
+	    $this->request = resolve( Request::class );
         $this->token = isset($options['token']) ? $options['token'] : '';
         $this->encodingAESKey = isset($options['encodingaeskey']) ? $options['encodingaeskey'] : '';
         $this->appId = isset($options['appid']) ? $options['appid'] : '';
@@ -143,7 +150,7 @@ class Server
     {
         $this->prepareInput();
 
-        $encryptStr = !empty($_GET['echostr']) ? $_GET['echostr'] : $this->encryptStr;
+	    $encryptStr = $this->request->input( 'echostr', $this->encryptStr );
 
         $input = array(
             $encryptStr,
@@ -182,7 +189,7 @@ class Server
 
         $input = array();
 
-        if ($_SERVER['REQUEST_METHOD'] == "POST") {
+        if ($this->request->server( 'REQUEST_METHOD' ) == "POST") {
 
             $xmlInput = file_get_contents('php://input');
 
@@ -193,14 +200,14 @@ class Server
             }
 
             $input = $this->getCrypt()->decryptMsg(
-                    $_REQUEST['msg_signature'],
-                    $_REQUEST['nonce'],
-                    $_REQUEST['timestamp'],
+                    $this->request->input('msg_signature'),
+                    $this->request->input('nonce'),
+                    $this->request->input('timestamp'),
                     $xmlInput
                 );
         }
 
-        $this->input = new Bag(array_merge($_REQUEST, (array) $input));
+        $this->input = new Bag(array_merge($this->request->input(), (array) $input));
 
     }
 

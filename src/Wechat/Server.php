@@ -191,7 +191,7 @@ class Server
 
         if ($this->request->server( 'REQUEST_METHOD' ) == "POST") {
 
-            $xmlInput = file_get_contents('php://input');
+            $xmlInput = $this->request->getContent();
 
             $array = XML::parse($xmlInput);
 

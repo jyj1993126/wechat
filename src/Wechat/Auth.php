@@ -2,6 +2,8 @@
 
 namespace Jyj1993126\Wechat;
 
+use Illuminate\Http\RedirectResponse;
+use Illuminate\Routing\Redirector;
 use Jyj1993126\Wechat\Utils\Bag;
 
 /**
@@ -80,19 +82,18 @@ class Auth
         return self::API_URL.'?'.http_build_query($params).'#wechat_redirect';
     }
 
-    /**
-     * 直接跳转.
-     *
-     * @param string $to
-     * @param string $scope
-     * @param string $state
-     */
+	/**
+	 * 直接跳转.
+	 *
+	 * @param string $to
+	 * @param string $scope
+	 * @param string $state
+	 * @return RedirectResponse|Redirector
+	 */
     public function redirect($to = null, $scope = 'snsapi_base', $state = null)
     {
         $state = $state ? $state : md5(time());
-        header('Location:'.$this->url($to, $scope, $state));
-
-        exit;
+	    return redirect( $this->url( $to, $scope, $state ) );
     }
 
     /**
@@ -116,7 +117,7 @@ class Auth
     public function authorize($to = null, $scope = 'snsapi_base', $state = 'STATE')
     {
         if (!$this->input->get('state') && !$this->input->get('code')) {
-            $this->redirect($to, $scope, $state);
+            return $this->redirect($to, $scope, $state);
         }
 
         return $this->user();

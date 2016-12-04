@@ -2,6 +2,7 @@
 
 namespace Jyj1993126\Wechat;
 
+use Illuminate\Http\Request;
 use Jyj1993126\Wechat\Utils\Bag;
 
 class Input extends Bag
@@ -11,6 +12,7 @@ class Input extends Bag
      */
     public function __construct()
     {
-        parent::__construct(array_merge($_GET, $_POST));
+	    $request = resolve( Request::class );
+	    parent::__construct( $request->input() );
     }
 }

@@ -219,17 +219,11 @@ class Server
      */
     protected function getCrypt()
     {
-        static $crypt;
-
-        if (!$crypt) {
-            if (empty($this->encodingAESKey) || empty($this->token)) {
-                throw new Exception("加密模式下 'encodingAESKey' 与 'token' 都不能为空！");
-            }
-
-            $crypt = new Crypt($this->appId, $this->token, $this->encodingAESKey);
+        if (empty($this->encodingAESKey) || empty($this->token)) {
+            throw new Exception("加密模式下 'encodingAESKey' 与 'token' 都不能为空！");
         }
 
-        return $crypt;
+        return new Crypt($this->appId, $this->token, $this->encodingAESKey);
     }
 
     /**
